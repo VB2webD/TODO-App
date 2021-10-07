@@ -1,0 +1,14 @@
+.ToDoItem--item {
+  color: darkcyan;
+  font-size: 36px;
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  width: 95%;
+  padding: 2px 0.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.ToDoItem--is-done {
+  text-decoration: line-through;
+}
