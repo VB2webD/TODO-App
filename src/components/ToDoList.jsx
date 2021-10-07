@@ -5,7 +5,7 @@ export const ToDoList = ({ todos }) => {
     <>
       <ul name="ToDos:">
         {todos.map(({ id, name }) => (
-          <ToDoItem key={id} name={name} />
+          <ToDoItem key={id} name={name} id={id} />
         ))}
       </ul>
     </>

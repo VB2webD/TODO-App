@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./ToDoItem.css";
 import success from "../media/zeldaitem.mp3";
 import fail from "../media/chanchan.mp3";
+import { useLocalStorageState } from "../utilities/localStorage";
 
-export const ToDoItem = ({ name }) => {
-  const [isDone, setIsDone] = useState(false);
+export const ToDoItem = ({ name, id }) => {
+  const [isDone, setIsDone] = useLocalStorageState("checked--" + id, false);
 
   const handleClick = () => {
     setIsDone(!isDone);
@@ -15,8 +16,9 @@ export const ToDoItem = ({ name }) => {
     ? "ToDoItem--item ToDoItem--is-done"
     : "ToDoItem--item";
   return (
-    <li className={itemState} onClick={handleClick}>
+    <li className={itemState} onClick={handleClick} id={id}>
       {name}
+      🔥
     </li>
   );
 };
